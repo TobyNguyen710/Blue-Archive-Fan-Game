@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://vncoal5ypvmt"]
+
+[ext_resource type="Texture2D" path="res://BA_Art/BG/BG_HyakkiyakoLookOut_Sunset.jpg" id="1_wfler"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43s5u"]
+size = Vector2(512, 200)
+
+[node name="Battle" type="Node2D"]
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.431373, 0.431373, 0.431373, 1)
+position = Vector2(0, -50)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_wfler")
+centered = false
+
+[node name="CardDropArea" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CardDropArea"]
+position = Vector2(256, 100)
+shape = SubResource("RectangleShape2D_43s5u")
